@@ -1,0 +1,25 @@
+{
+  "slug": "Ynys",
+  "name": "Ynys",
+  "version": "1.0.0",
+  "license": "proprietary",
+  "brand": "Ynys",
+  "author": "Joe Heath",
+  "authorEmail": "joe.heath@gmail.com",
+  "authorUrl": "",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "kami",
+      "name": "kami",
+      "description": "",
+      "tags": [
+        "Blank"
+      ]
+    }
+  ]
+}
