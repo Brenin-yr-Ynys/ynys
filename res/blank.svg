@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="25.4mm"
+   height="128.5mm"
+   viewBox="0 0 25.399999 128.5"
+   version="1.1"
+   id="svg16"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   sodipodi:docname="kami.svg">
+  <defs
+     id="defs10">
+    <rect
+       x="3.5907738"
+       y="100.54167"
+       width="9.0714283"
+       height="5.6696428"
+       id="rect26" />
+    <rect
+       x="6.8035714"
+       y="17.008929"
+       width="12.662202"
+       height="93.549108"
+       id="rect20" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="121.14286"
+     inkscape:cy="238.31444"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer3"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-page="true"
+     inkscape:window-width="812"
+     inkscape:window-height="943"
+     inkscape:window-x="13"
+     inkscape:window-y="58"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect32"
+       width="1.8898809"
+       height="3.5907736"
+       x="19.465773"
+       y="103.1875" />
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect857"
+       width="25.4"
+       height="128.5"
+       x="0"
+       y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Text">
+    <g
+       aria-label="Y
+n
+y
+s"
+       transform="translate(2.4568468,6.4255956)"
+       id="text18"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian';white-space:pre;shape-inside:url(#rect20);display:inline;fill:#000000;fill-opacity:1;stroke:none">
+      <path
+         d="m 13.282938,18.970634 -2.707836,4.320136 v 3.374461 H 9.5519118 v -3.26594 L 6.8337401,18.970634 h 1.1317103 l 2.1032236,3.44164 2.123895,-3.44164 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian'"
+         id="path864" />
+      <path
+         d="m 12.585309,39.920339 h -0.971514 v -3.286611 q 0,-0.397907 -0.04651,-0.744138 -0.04651,-0.351399 -0.170531,-0.547769 -0.129191,-0.21704 -0.37207,-0.320393 -0.242878,-0.10852 -0.63045,-0.10852 -0.3979073,0 -0.8319879,0.19637 -0.4340807,0.19637 -0.8319879,0.50126 v 4.309801 H 7.7587453 V 34.1481 h 0.9715139 v 0.640785 q 0.4547511,-0.377237 0.940508,-0.589109 0.4857568,-0.211873 0.9973518,-0.211873 0.935341,0 1.426265,0.563271 0.490925,0.563272 0.490925,1.622635 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian'"
+         id="path866" />
+      <path
+         d="M 12.750673,47.403207 9.3813801,55.304509 H 8.3426872 L 9.4175535,52.896395 7.1179596,47.403207 h 1.0541959 l 1.772496,4.278795 1.7879985,-4.278795 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian'"
+         id="path868" />
+      <path
+         d="m 11.882511,64.766579 q 0,0.790646 -0.656288,1.297074 -0.651121,0.506427 -1.7828313,0.506427 -0.6407858,0 -1.1782189,-0.149861 Q 7.7329072,66.26519 7.3711733,66.084323 v -1.090369 h 0.051676 q 0.4599188,0.346231 1.0231901,0.552936 0.5632713,0.201538 1.080034,0.201538 0.6407853,0 1.0025193,-0.206705 0.361734,-0.206706 0.361734,-0.651121 0,-0.341064 -0.19637,-0.516763 Q 10.497588,64.19814 9.9394838,64.074117 9.7327788,64.027608 9.396883,63.965596 9.0661549,63.903585 8.7922707,63.831238 8.0326295,63.629701 7.7122367,63.242129 7.3970115,62.849389 7.3970115,62.28095 q 0,-0.356566 0.1446935,-0.671791 0.1498612,-0.315226 0.4495835,-0.563272 0.2893871,-0.242878 0.733803,-0.382404 0.4495836,-0.144694 1.0025196,-0.144694 0.5167629,0 1.0438609,0.129191 0.532265,0.124023 0.883664,0.30489 v 1.038693 h -0.05168 q -0.372069,-0.273884 -0.904335,-0.459919 -0.532266,-0.191202 -1.0438606,-0.191202 -0.5322656,0 -0.8991671,0.206705 -0.3669015,0.201538 -0.3669015,0.604612 0,0.356567 0.2222079,0.537434 0.2170404,0.180867 0.7027973,0.294554 0.2687166,0.06201 0.5994447,0.124023 0.3358953,0.06201 0.5581033,0.113688 0.676959,0.155029 1.043861,0.532266 0.366901,0.382404 0.366901,1.012855 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian'"
+         id="path870" />
+    </g>
+    <g
+       aria-label="kami"
+       transform="translate(4.3467258,19.465774)"
+       id="text24"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:1.25;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian';white-space:pre;shape-inside:url(#rect26);display:inline;fill:#000000;fill-opacity:1;stroke:none">
+      <path
+         d="M 5.6551798,103.75952 H 5.2279877 l -0.7717019,-0.84233 -0.2101509,0.19982 v 0.64251 H 3.9222957 v -2.68029 h 0.3238392 v 1.7191 l 0.935344,-0.9629 H 5.589723 l -0.8940029,0.88883 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian';fill:#000000"
+         id="path873" />
+      <path
+         d="M 7.4914169,103.75952 H 7.1693003 v -0.20499 q -0.043064,0.0293 -0.1171333,0.0827 -0.072347,0.0517 -0.1412491,0.0827 -0.08096,0.0396 -0.1860352,0.0654 -0.1050755,0.0276 -0.2463245,0.0276 -0.2601049,0 -0.4409725,-0.17226 -0.1808677,-0.17225 -0.1808677,-0.43925 0,-0.21876 0.093018,-0.35312 0.09474,-0.13608 0.2687176,-0.2136 0.1757,-0.0775 0.4220245,-0.10507 0.2463245,-0.0276 0.5288225,-0.0413 v -0.05 q 0,-0.11024 -0.039619,-0.18259 -0.037896,-0.0724 -0.1102432,-0.11369 -0.068902,-0.0396 -0.1653647,-0.0534 -0.096463,-0.0138 -0.2015382,-0.0138 -0.1274686,0 -0.2842205,0.0344 -0.156752,0.0327 -0.3238392,0.0965 h -0.017226 v -0.32901 q 0.09474,-0.0258 0.2738853,-0.0568 0.179145,-0.031 0.3531225,-0.031 0.2032607,0 0.3531225,0.0344 0.1515843,0.0327 0.2618274,0.11369 0.1085206,0.0792 0.1653647,0.20498 0.056844,0.12575 0.056844,0.31178 z m -0.3221166,-0.4737 v -0.53572 q -0.1481392,0.009 -0.3496774,0.0258 -0.1998157,0.0172 -0.316949,0.0499 -0.1395265,0.0396 -0.2256539,0.12403 -0.086127,0.0827 -0.086127,0.2291 0,0.16536 0.099908,0.24977 0.099908,0.0827 0.3048911,0.0827 0.1705323,0 0.3117813,-0.0655 0.1412491,-0.0672 0.2618275,-0.16019 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian';fill:#000000"
+         id="path875" />
+      <path
+         d="M 10.926179,103.75952 H 10.60234 v -1.09554 q 0,-0.12403 -0.01206,-0.23944 -0.01033,-0.11541 -0.04651,-0.18431 -0.03962,-0.0741 -0.113689,-0.11197 -0.07407,-0.0379 -0.213596,-0.0379 -0.136081,0 -0.2721625,0.0689 -0.1360813,0.0672 -0.2721627,0.17225 0.00517,0.0396 0.00861,0.093 0.00345,0.0517 0.00345,0.10335 v 1.23163 H 9.3603825 v -1.09554 q 0,-0.12747 -0.012058,-0.24116 -0.010335,-0.11541 -0.046509,-0.18431 -0.039619,-0.0741 -0.1136882,-0.11025 -0.07407,-0.0379 -0.2135961,-0.0379 -0.1326363,0 -0.2669951,0.0655 -0.1326362,0.0655 -0.2652725,0.16709 v 1.43661 H 8.1184247 v -1.92409 h 0.3238392 v 0.2136 q 0.1515843,-0.12575 0.3014461,-0.19638 0.1515843,-0.0706 0.3221166,-0.0706 0.1963706,0 0.3324519,0.0827 0.1378039,0.0827 0.2049833,0.2291 0.1963706,-0.16536 0.3582902,-0.23771 0.16192,-0.0741 0.346232,-0.0741 0.316949,0 0.466811,0.19293 0.151584,0.1912 0.151584,0.53571 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian';fill:#000000"
+         id="path877" />
+      <path
+         d="m 11.897697,101.51331 h -0.36518 v -0.33589 h 0.36518 z m -0.02067,2.24621 h -0.323839 v -1.92409 h 0.323839 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian';fill:#000000"
+         id="path879" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="components"
+     style="display:none" />
+</svg>
