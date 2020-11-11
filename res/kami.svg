@@ -40,15 +40,15 @@
      inkscape:cx="121.14286"
      inkscape:cy="238.31444"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:snap-page="true"
-     inkscape:window-width="812"
-     inkscape:window-height="943"
-     inkscape:window-x="13"
-     inkscape:window-y="58"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1680"
+     inkscape:window-height="1005"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata13">
     <rdf:RDF>
@@ -57,7 +57,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -74,7 +74,7 @@
        x="19.465773"
        y="103.1875" />
     <rect
-       style="fill:#e6e6e6;stroke-width:0.264583"
+       style="fill:#cccccc;stroke-width:0.264583"
        id="rect857"
        width="25.4"
        height="128.5"
@@ -86,10 +86,7 @@
      id="layer2"
      inkscape:label="Text">
     <g
-       aria-label="Y
-n
-y
-s"
+       aria-label="Y n y s"
        transform="translate(2.4568468,6.4255956)"
        id="text18"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Noto Sans Armenian';-inkscape-font-specification:'Noto Sans Armenian';white-space:pre;shape-inside:url(#rect20);display:inline;fill:#000000;fill-opacity:1;stroke:none">
