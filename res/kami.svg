@@ -37,18 +37,26 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="121.14286"
-     inkscape:cy="238.31444"
+     inkscape:cx="26.14286"
+     inkscape:cy="251.17158"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      inkscape:document-rotation="0"
-     showgrid="false"
+     showgrid="true"
      inkscape:snap-page="true"
      inkscape:window-width="1680"
      inkscape:window-height="1005"
      inkscape:window-x="0"
      inkscape:window-y="23"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1748"
+       dotted="true"
+       originx="12.699999"
+       originy="64.250001" />
+  </sodipodi:namedview>
   <metadata
      id="metadata13">
     <rdf:RDF>
@@ -57,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -134,5 +142,36 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="components"
-     style="display:none" />
+     style="display:none">
+    <circle
+       style="fill:#00ff00;stroke-width:0.264583"
+       id="path1762"
+       cx="12.699999"
+       cy="13.979167"
+       r="2.6458333" />
+    <circle
+       style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+       id="path1768"
+       cx="7.4083323"
+       cy="98.645836"
+       r="2.6458333" />
+    <circle
+       style="display:inline;fill:#ff0000;stroke-width:0.264583"
+       id="path1766"
+       cx="12.699999"
+       cy="85.416672"
+       r="2.6458333" />
+    <circle
+       style="display:inline;fill:#0000ff;stroke-width:0.264583"
+       id="path1764"
+       cx="12.699999"
+       cy="111.875"
+       r="2.6458333" />
+    <circle
+       style="display:inline;fill:#ff00ff;stroke-width:0.264583"
+       id="path1772"
+       cx="17.991667"
+       cy="98.645836"
+       r="2.6458333" />
+  </g>
 </svg>
