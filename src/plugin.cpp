@@ -10,6 +10,7 @@ void init(Plugin* p) {
 	// Add modules here
 	// p->addModel(modelMyModule);
 	p->addModel(modelKami);
+	p->addModel(modelStyleGuide);
 	p->addModel(modelBlank);
 	p->addModel(modelCloc);
 

@@ -36,6 +36,12 @@
       "tags": [
         "Clock"
       ]
+    },
+    {
+      "slug": "StyleGuide",
+      "name": "StyleGuide",
+      "description": "Components laid out for dev use",
+      "tags": []
     }
   ]
 }

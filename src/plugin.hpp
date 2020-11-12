@@ -10,5 +10,6 @@ extern Plugin* pluginInstance;
 // Declare each Model, defined in each module source file
 // extern Model* modelMyModule;
 extern Model* modelKami;
+extern Model* modelStyleGuide;
 extern Model* modelBlank;
 extern Model* modelCloc;
