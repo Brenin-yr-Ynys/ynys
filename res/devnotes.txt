@@ -4,5 +4,8 @@ SVG:
 height 128.5mm, width multiple of 5.08mm
 background grey 20%
 
-Ynys tag:
-Font: tbc
+Names
+Font: American Typewriter, 30
+
+Labels:
+Font: 

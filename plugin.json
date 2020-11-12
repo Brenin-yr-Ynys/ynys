@@ -2,7 +2,7 @@
   "slug": "Ynys",
   "name": "Ynys",
   "version": "1.0.0",
-  "license": "proprietary",
+  "license": "GPL-3.0-or-later",
   "brand": "Ynys",
   "author": "Joe Heath",
   "authorEmail": "joe.heath@gmail.com",
@@ -10,7 +10,7 @@
   "pluginUrl": "",
   "manualUrl": "",
   "sourceUrl": "",
-  "donateUrl": "",
+  "donateUrl": "https://paypal.me/ynysvcv?locale.x=en_GB",
   "changelogUrl": "",
   "modules": [
     {
@@ -27,6 +27,14 @@
       "description": "Blank plate",
       "tags": [
         "Blank"
+      ]
+    },
+    {
+      "slug": "Cloc",
+      "name": "Cloc",
+      "description": "",
+      "tags": [
+        "Clock"
       ]
     }
   ]
