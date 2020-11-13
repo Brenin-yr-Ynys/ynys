@@ -32,7 +32,20 @@ struct Cloc : Module {
 
 	void process(const ProcessArgs& args) override {
 	}
+
+	json_t* dataToJson() override {
+		json_t* rootJ = json_object();
+		json_object_set_new(rootJ, "midi", midiInput.toJson());
+		return rootJ;
+	}
+
+	void dataFromJson(json_t* rootJ) override {
+		json_t* midiJ = json_object_get(rootJ, "midi");
+		if (midiJ)
+			midiInput.fromJson(midiJ);
+	}
 };
+
 
 
 struct ClocWidget : ModuleWidget {
