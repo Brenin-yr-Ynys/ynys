@@ -9,6 +9,7 @@ struct StyleGuide : Module {
 		NUM_INPUTS
 	};
 	enum OutputIds {
+		PATH47_OUTPUT,
 		NUM_OUTPUTS
 	};
 	enum LightIds {
@@ -33,6 +34,8 @@ struct StyleGuideWidget : ModuleWidget {
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(85.35, 106.583)), module, StyleGuide::PATH47_OUTPUT));
 	}
 };
 
