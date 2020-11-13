@@ -9,6 +9,7 @@ using namespace ::rack;
 struct Cloc : Module {
 	enum ParamIds {
 		STOP_PARAM,
+		PLAY_PARAM,
 		NUM_PARAMS
 	};
 	enum InputIds {
@@ -69,7 +70,8 @@ struct ClocWidget : ModuleWidget {
 		addChild(createLightCentered<MediumLight<GreenLight>>(mm2px(Vec(20.028, 96.0)), module, Cloc::RUN_LIGHT));
 		addChild(createLightCentered<MediumLight<GreenLight>>(mm2px(Vec(32.6, 96.0)), module, Cloc::BPM_LIGHT));
 
-		addParam(createParam<ArtStopSwitch>(mm2px(Vec(4, 55.0)), module, Cloc::STOP_PARAM));
+		addParam(createParam<ArtStopSwitch>(mm2px(Vec(2.2, 55.0)), module, Cloc::STOP_PARAM));
+		addParam(createParam<ArtPlaySwitch>(mm2px(Vec(19.2, 55.0)), module, Cloc::PLAY_PARAM));
 
 		MidiWidget* midiWidget = createWidget<MidiWidget> (mm2px (Vec(3.41891, 21.917)));
 		midiWidget->box.size = mm2px (Vec (33.840, 28));
