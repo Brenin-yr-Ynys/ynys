@@ -34,11 +34,8 @@ struct Cloc : Module {
 	int clockDivision = 24;
 
 	dsp::PulseGenerator bpmPulse;
-	dsp::PulseGenerator clockDividerPulse;
-	dsp::PulseGenerator retriggerPulses[16];
-	dsp::PulseGenerator startPulse;
-	dsp::PulseGenerator stopPulse;
-	dsp::PulseGenerator continuePulse;
+	dsp::PulseGenerator runPulse;
+	dsp::PulseGenerator resetPulse;
 
 	Cloc() {
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
