@@ -30,11 +30,72 @@ struct Cloc : Module {
 
 	midi::InputQueue midiInput;
 
+	uint32_t clock = 0;
+	int clockDivision = 24;
+
+	dsp::PulseGenerator bpmPulse;
+	dsp::PulseGenerator clockDividerPulse;
+	dsp::PulseGenerator retriggerPulses[16];
+	dsp::PulseGenerator startPulse;
+	dsp::PulseGenerator stopPulse;
+	dsp::PulseGenerator continuePulse;
+
 	Cloc() {
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
+		onReset();
+	}
+
+	void onReset() override {
+		//channels = 1;
+		//polyMode = ROTATE_MODE;
+		clockDivision = 24;
+		panic();
+		midiInput.reset();
+	}
+
+	/** Resets performance state */
+	void panic() {
+
 	}
 
 	void process(const ProcessArgs& args) override {
+		midi::Message msg;
+		while (midiInput.shift(&msg)) {
+			if (msg.getStatus() == 0xf) {
+				processTiming(msg);
+
+			}
+		}
+
+		outputs[BPM_OUTPUT].setVoltage(bpmPulse.process(args.sampleTime)? 10.f : 0.f);
+	}
+
+	void processTiming(midi::Message msg) {
+		switch (msg.getChannel()) {
+			// Timing - need to chnage all this TODO
+			case 0x8: {
+				if (clock % clockDivision == 0) {
+				//	bpmPulse.trigger(1e-3);
+				}
+				bpmPulse.trigger(1e-3);
+				clock++;
+			} break;
+			// Start
+			case 0xa: {
+				//startPulse.trigger(1e-3);
+				clock = 0;
+			} break;
+			// Continue
+			case 0xb: {
+				//continuePulse.trigger(1e-3);
+			} break;
+			// Stop
+			case 0xc: {
+				//stopPulse.trigger(1e-3);
+				clock = 0;
+			} break;
+			default: break;
+		}
 	}
 
 	json_t* dataToJson() override {
