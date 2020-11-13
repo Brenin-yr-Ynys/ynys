@@ -1,5 +1,8 @@
 #include "plugin.hpp"
 
+#include "app/MidiWidget.hpp"
+
+using namespace ::rack;
 
 struct Cloc : Module {
 	enum ParamIds {
@@ -20,6 +23,8 @@ struct Cloc : Module {
 		BPM_LIGHT,
 		NUM_LIGHTS
 	};
+
+	midi::InputQueue midiInput;
 
 	Cloc() {
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
@@ -44,9 +49,16 @@ struct ClocWidget : ModuleWidget {
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(32.6, 110.715)), module, Cloc::BPM_OUTPUT));
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(7.383, 110.93)), module, Cloc::RESET_OUTPUT));
 
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(7.383, 96.0)), module, Cloc::RESET_LIGHT));
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(20.028, 96.0)), module, Cloc::RUN_LIGHT));
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(32.6, 96.0)), module, Cloc::BPM_LIGHT));
+		addChild(createLightCentered<MediumLight<GreenLight>>(mm2px(Vec(7.383, 96.0)), module, Cloc::RESET_LIGHT));
+		addChild(createLightCentered<MediumLight<GreenLight>>(mm2px(Vec(20.028, 96.0)), module, Cloc::RUN_LIGHT));
+		addChild(createLightCentered<MediumLight<GreenLight>>(mm2px(Vec(32.6, 96.0)), module, Cloc::BPM_LIGHT));
+
+		MidiWidget* midiWidget = createWidget<MidiWidget> (mm2px (Vec(3.41891, 21.917)));
+		midiWidget->box.size = mm2px (Vec (33.840, 28));
+		midiWidget->setMidiPort(module ? &module->midiInput : NULL);
+		addChild (midiWidget);
+		//return midiAInWidget;
+
 
 		// mm2px(Vec(34.396, 15.875))
 		addChild(createWidget<Widget>(mm2px(Vec(3.122, 21.917))));
