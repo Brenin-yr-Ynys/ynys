@@ -1,11 +1,14 @@
 #include "plugin.hpp"
 
 #include "app/MidiWidget.hpp"
+#include "ynys.hpp"
+
 
 using namespace ::rack;
 
 struct Cloc : Module {
 	enum ParamIds {
+		STOP_PARAM,
 		NUM_PARAMS
 	};
 	enum InputIds {
@@ -66,6 +69,8 @@ struct ClocWidget : ModuleWidget {
 		addChild(createLightCentered<MediumLight<GreenLight>>(mm2px(Vec(20.028, 96.0)), module, Cloc::RUN_LIGHT));
 		addChild(createLightCentered<MediumLight<GreenLight>>(mm2px(Vec(32.6, 96.0)), module, Cloc::BPM_LIGHT));
 
+		addParam(createParam<ArtStopSwitch>(mm2px(Vec(4, 55.0)), module, Cloc::STOP_PARAM));
+
 		MidiWidget* midiWidget = createWidget<MidiWidget> (mm2px (Vec(3.41891, 21.917)));
 		midiWidget->box.size = mm2px (Vec (33.840, 28));
 		midiWidget->setMidiPort(module ? &module->midiInput : NULL);
@@ -74,9 +79,9 @@ struct ClocWidget : ModuleWidget {
 
 
 		// mm2px(Vec(34.396, 15.875))
-		addChild(createWidget<Widget>(mm2px(Vec(3.122, 21.917))));
+		//addChild(createWidget<Widget>(mm2px(Vec(3.122, 21.917))));
 		// mm2px(Vec(34.396, 15.875))
-		addChild(createWidget<Widget>(mm2px(Vec(3.122, 72.188))));
+		//addChild(createWidget<Widget>(mm2px(Vec(3.122, 72.188))));
 	}
 };
 
