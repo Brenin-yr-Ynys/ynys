@@ -19,23 +19,23 @@ struct ArtStopSwitch : ModalSwitch {
   ArtStopSwitch() {
 		shadow->opacity = 0;
     lit = false;
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_stop_off.svg")));
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_stop_on.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_stop_off.svg")));
 	}
 
-  void on() {
+  void off() {
     if (frames.size()>1) {
       sw->setSvg(frames[1]);
       fb->dirty = true;
-      lit = true;
+      lit = false;
     }
   }
 
-  void off() {
+  void on() {
     if (!frames.empty()) {
       sw->setSvg(frames[0]);
       fb->dirty = true;
-      lit = false;
+      lit = true;
     }
   }
 

@@ -59,14 +59,13 @@ struct Cloc : Module {
 	void setWidgets(ArtStopSwitch* stopSw, ArtPlaySwitch* playSw) {
 		artPlaySwitch = playSw;
 		artStopSwitch = stopSw;
-		//artStopSwitch->on();
 	}
 
 	void onReset() override {
 		panic();
 		midiInput.reset();
 		state = STOP;
-		//artStopSwitch->on();
+		if (artStopSwitch) artStopSwitch->on();
 	}
 
 	/** Resets performance state */
@@ -89,7 +88,7 @@ struct Cloc : Module {
 
 	void processTiming(midi::Message msg) {
 		switch (msg.getChannel()) {
-			// Timing - need to chnage all this TODO
+			// Clock
 			case 0x8: {
 				bpmPulse.trigger(1e-3);
 			} break;
