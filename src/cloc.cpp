@@ -113,7 +113,7 @@ struct Cloc : Module {
 			} break;
 			case PAUSE: {
 				if (artStopSwitch->isOn()) artStopSwitch->off();
-				if (!artPlaySwitch->isOn()) artPlaySwitch->on();
+				if (!artPlaySwitch->isFlashing()) artPlaySwitch->flash();
 			} break;
 			default:
 			{

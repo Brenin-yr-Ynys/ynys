@@ -26,13 +26,48 @@ struct ModalSwitch : SvgSwitch {
   }
 };
 
-struct ArtPlaySwitch : ModalSwitch {
+struct FlashingSwitch : ModalSwitch {
+  bool flashing = false;
+  unsigned int count = 0;
+  unsigned int nextFrame = offFrame;
 
-  bool flashing;
+  void step() override {
+    ModalSwitch::step();
+    if (flashing && (count > APP->window->getLastFrameRate()/3)) {
+        count = 0;
+        sw->setSvg(frames[nextFrame]);
+        fb->dirty = true;
+        nextFrame = nextFrame ? 0 : 1;
+        count = 0;
+    }
+    count++;
+  }
+
+  void on() {
+    ModalSwitch::on();
+    flashing = false;
+  }
+
+  void off() {
+    ModalSwitch::off();
+    flashing = false;
+  }
+
+  void flash() {
+    nextFrame = offFrame;
+    count = 0;
+    flashing = true;
+  }
+
+  bool isFlashing() {
+    return flashing;
+  }
+
+};
+
+struct ArtPlaySwitch : FlashingSwitch {
 
   ArtPlaySwitch() {
-  //  lit = false;
-    flashing = false;
 		shadow->opacity = 0;
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_play_off.svg")));
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_play_on.svg")));
