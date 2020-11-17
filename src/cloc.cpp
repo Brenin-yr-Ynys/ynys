@@ -1,6 +1,7 @@
 #include "plugin.hpp"
 
 #include "app/MidiWidget.hpp"
+#include "mmcmidi.hpp"
 #include "ynys.hpp"
 
 using namespace ::rack;
@@ -44,15 +45,15 @@ struct Cloc : Module {
 	dsp::PulseGenerator runPulse;
 	dsp::PulseGenerator resetPulse;
 
-	dsp::SchmittTrigger stopTrig, playTrig;
-
-	State state;
+	State state = STOP;
 
 	ArtStopSwitch* artStopSwitch;
 	ArtPlaySwitch* artPlaySwitch;
 
 	Cloc() {
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
+		//midi::addDriver(1234, new MmcMidiDriver())
+		//mmcmidiInit();
 		onReset();
 	}
 
@@ -65,7 +66,6 @@ struct Cloc : Module {
 		panic();
 		midiInput.reset();
 		state = STOP;
-		if (artStopSwitch) artStopSwitch->on();
 	}
 
 	/** Resets performance state */
@@ -74,11 +74,26 @@ struct Cloc : Module {
 	}
 
 	void process(const ProcessArgs& args) override {
-		midi::Message msg;
+		MMCMessage msg;
 		while (midiInput.shift(&msg)) {
-			if (msg.getStatus() == 0xf) {
-				processTiming(msg);
-
+			if (msg.isClock()) {
+				bpmPulse.trigger(1e-3);
+			}
+			else if (msg.isMMC()) {
+				//DEBUG("Got MMC MIDI message :%x", msg.getMMC());
+				switch (msg.getMMC()) {
+					case 0x1:
+						state = STOP;
+						break;
+					case 0x2:
+						state = PLAY;
+						break;
+					case 0x9:
+						state = PAUSE;
+						break;
+					default:
+						break;
+				}
 			}
 		}
 
@@ -86,33 +101,25 @@ struct Cloc : Module {
 		processButtons();
 	}
 
-	void processTiming(midi::Message msg) {
-		switch (msg.getChannel()) {
-			// Clock
-			case 0x8: {
-				bpmPulse.trigger(1e-3);
-			} break;
-			// Start
-			case 0xa: {
-				artStopSwitch->off();
-				state = PLAY;
-			} break;
-			// Continue
-			case 0xb: {
-				state = PLAY;
-			} break;
-			// Stop
-			case 0xc: {
-				artStopSwitch->on();
-				if (state == PLAY) state = PAUSE;
-				else state = STOP;
-			} break;
-			default: break;
-		}
-	}
-
 	void processButtons() {
-
+		switch (state) {
+			case STOP: {
+				if (!artStopSwitch->isOn()) artStopSwitch->on();
+				if (artPlaySwitch->isOn()) artPlaySwitch->off();
+			} break;
+			case PLAY: {
+				if (artStopSwitch->isOn()) artStopSwitch->off();
+				if (!artPlaySwitch->isOn()) artPlaySwitch->on();
+			} break;
+			case PAUSE: {
+				if (artStopSwitch->isOn()) artStopSwitch->off();
+				if (!artPlaySwitch->isOn()) artPlaySwitch->on();
+			} break;
+			default:
+			{
+				//INFO("Unknown State");
+			} break;
+		}
 	}
 
 	json_t* dataToJson() override {
@@ -152,19 +159,13 @@ struct ClocWidget : ModuleWidget {
 		ArtPlaySwitch* artPlaySwitch = createParam<ArtPlaySwitch>(mm2px(Vec(19.2, 55.0)), module, Cloc::PLAY_PARAM);
 		addParam(artStopSwitch);
 		addParam(artPlaySwitch);
-		module->setWidgets(artStopSwitch, artPlaySwitch);
+		if (module) module->setWidgets(artStopSwitch, artPlaySwitch);
+		//artStopSwitch->on();
 
 		MidiWidget* midiWidget = createWidget<MidiWidget> (mm2px (Vec(3.41891, 21.917)));
 		midiWidget->box.size = mm2px (Vec (33.840, 28));
 		midiWidget->setMidiPort(module ? &module->midiInput : NULL);
 		addChild (midiWidget);
-		//return midiAInWidget;
-
-
-		// mm2px(Vec(34.396, 15.875))
-		//addChild(createWidget<Widget>(mm2px(Vec(3.122, 21.917))));
-		// mm2px(Vec(34.396, 15.875))
-		//addChild(createWidget<Widget>(mm2px(Vec(3.122, 72.188))));
 	}
 
 };

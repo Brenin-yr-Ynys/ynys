@@ -1,11 +1,38 @@
 
 struct ModalSwitch : SvgSwitch {
+  bool lit = false;
 
+  unsigned int offFrame = 0;
+  unsigned int onFrame = 1;
+
+  void on() {
+    if (frames.size()>onFrame) {
+      sw->setSvg(frames[onFrame]);
+      fb->dirty = true;
+      lit = true;
+    }
+  }
+
+  void off() {
+    if (frames.size()>offFrame) {
+      sw->setSvg(frames[offFrame]);
+      fb->dirty = true;
+      lit = false;
+    }
+  }
+
+  bool isOn() {
+    return lit;
+  }
 };
 
 struct ArtPlaySwitch : ModalSwitch {
 
+  bool flashing;
+
   ArtPlaySwitch() {
+  //  lit = false;
+    flashing = false;
 		shadow->opacity = 0;
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_play_off.svg")));
 		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_play_on.svg")));
@@ -14,32 +41,13 @@ struct ArtPlaySwitch : ModalSwitch {
 
 struct ArtStopSwitch : ModalSwitch {
 
-  bool lit;
-
   ArtStopSwitch() {
+    lit = true;
+    onFrame = 0;
+    offFrame = 1;
 		shadow->opacity = 0;
-    lit = false;
-		addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_stop_on.svg")));
+    addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_stop_on.svg")));
     addFrame(APP->window->loadSvg(asset::plugin(pluginInstance, "res/art_stop_off.svg")));
 	}
 
-  void off() {
-    if (frames.size()>1) {
-      sw->setSvg(frames[1]);
-      fb->dirty = true;
-      lit = false;
-    }
-  }
-
-  void on() {
-    if (!frames.empty()) {
-      sw->setSvg(frames[0]);
-      fb->dirty = true;
-      lit = true;
-    }
-  }
-
-  bool isOn() {
-    return lit;
-  }
 };
